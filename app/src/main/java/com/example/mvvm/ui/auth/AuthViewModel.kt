@@ -1,3 +1,4 @@
+
 package com.example.mvvm.ui.auth
 
 import android.view.View
@@ -19,8 +20,6 @@ class AuthViewModel:ViewModel() {
         }
         //this is on success
         authListener?.onSuccess()
-
-
     }
 
 }

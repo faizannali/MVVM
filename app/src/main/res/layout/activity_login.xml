@@ -146,8 +146,6 @@
                         android:src="@drawable/ic_google_plus"
                         android:layout_marginLeft="10dp"/>
                 </LinearLayout>
-
-
             </LinearLayout>
         </ScrollView>
 
