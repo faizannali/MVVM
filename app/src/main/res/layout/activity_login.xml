@@ -47,30 +47,38 @@
                 </RelativeLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:id="@+id/textInputEmail"
-                    style="@style/parent"
+
                     android:layout_marginTop="@dimen/loginViewsMargin">
                     <EditText
-                        android:text="@={viewModel.email}"
+                        android:text="@={viewModel.userName}"
                         android:id="@+id/editTextEmail"
-                        style="@style/modifiedEditText"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent"
                         android:inputType="textEmailAddress"
+                        style="@style/modifiedEditText"
                         android:maxLines="1"
-                        android:hint="@string/login_email_hint"/>
+                        android:hint="@string/login_username_hint"/>
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/textInputPassword"
-                    style="@style/parent"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_marginTop="@dimen/loginViewsMargin">
                     <EditText
                         android:text="@={viewModel.password}"
                         android:id="@+id/editTextPassword"
-                        style="@style/modifiedEditText"
                         android:hint="@string/login_password_hint"
                         android:maxLines="1"
-                        android:inputType="textPassword"/>
+                        style="@style/modifiedEditText"
+                        android:inputType="textPassword"
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent" />
                 </com.google.android.material.textfield.TextInputLayout>
+
 
                 <TextView
                     style="@style/viewParent"
@@ -79,6 +87,12 @@
                     android:textSize="@dimen/newsMoreTextSize"
                     android:layout_gravity="end"
                     android:layout_marginTop="10dp"/>
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="center_horizontal|center_vertical"/>
 
                 <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
                     android:onClick="@{viewModel::onLoginButtonClick}"
@@ -145,9 +159,12 @@
                         android:layout_height="wrap_content"
                         android:src="@drawable/ic_google_plus"
                         android:layout_marginLeft="10dp"/>
+
                 </LinearLayout>
+
             </LinearLayout>
         </ScrollView>
+
 
     </RelativeLayout>
 </layout>
